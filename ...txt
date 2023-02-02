@@ -1,0 +1,1 @@
+bitcoin-cli -regtest createrawtransaction '[{"txid" : "c462a6f0f1f94d2c35305e0aa2867ee9d1bb2b2cfb502066d5c4ded587d24a44", "vout" : 0}]' '{"bcrt1qrx308yt2s8enlnw8y6y9sexq6cdplqkfm7fx0d": 25, "bcrt1q0rl65sgmullvtvf2kkgcrnruhhgzj46hjvg46s": 24.5}'
