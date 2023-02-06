@@ -3,25 +3,22 @@ using namespace std;
 class Solution
 {
 public:
-    typedef long long ll;
-    long long countGood(vector<int> &nums, int k)
+    int n, m;
+    vector<vector<int>> grid;
+    bool solve(int i, int j, bool canDo)
     {
-        ll n = nums.size();
-        map<ll, ll> mp;
-        ll count = 0, ans = 0;
-        for (int i = 0, j = 0; j < n; j++)
+        if (i == n - 1 && j == m - 1)
+            return false;
+        if (grid[i][j] == 0)
+            return true;
+        if (canDo)
         {
-            mp[nums[j]]++;
-            count += (mp[nums[j]] - 1);
-            while (count >= k)
-            {
-                ans += n - j;
-                count -= mp[nums[i]] - 1;
-                mp[nums[i]]--;
-                i++;
-            }
+            bool ans1=solve(i+1,j,false);
         }
-        return ans;
+    }
+    bool isPossibleToCutPath(vector<vector<int>> &grid)
+    {
+        n = grid.size(), m = grid[0].size();
+        this->grid = grid;
     }
 };
-
